@@ -6,7 +6,7 @@ return `
             <h5 class="c-title">${name} </h5>
             <p class="c-body">${description} </p>
             <a href="#" class="c-btn c-btn:hover">Price: ${price} </a>
-            <a href="./details.html" class="c-btn c-btn:hover">Details</a>
+            <a href="./details.html?_id=${data._id} " class="c-btn c-btn:hover">Details</a> 
           </div>
         </div>
 
