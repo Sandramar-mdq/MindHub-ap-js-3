@@ -9,7 +9,6 @@ return `
             <a href="./details.html?_id=${_id} " class="c-btn c-btn:hover">Details</a> 
           </div>
         </div>
-
   `
 }
 
