@@ -1,4 +1,4 @@
-let template = (image, name, description, price)=>{ 
+let template = (image, name, description, price, _id)=>{ 
     return `
     <div class="card c-div" style="width: 18rem;">
               <img src="${image} " class="c-img" alt="">
@@ -6,7 +6,7 @@ let template = (image, name, description, price)=>{
                 <h5 class="c-title">${name} </h5>
                 <p class="c-body">${description} </p>
                 <a href="#" class="c-btn c-btn:hover">Price: ${price} </a>
-                <a href="./details.html" class="c-btn c-btn:hover">Details</a>
+                <a href="./details.html?_id=${_id}" class="c-btn c-btn:hover">Details</a>
               </div>
             </div>
     
@@ -26,7 +26,7 @@ let template = (image, name, description, price)=>{
             if ( hoy < reuniones.date){
               console.log(reuniones)
               template()
-              templates.push(template(reuniones.image, reuniones.name, reuniones.description, reuniones.price))
+              templates.push(template(reuniones.image, reuniones.name, reuniones.description, reuniones.price, reuniones._id))
             }
     
 
