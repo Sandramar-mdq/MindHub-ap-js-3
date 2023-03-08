@@ -13,7 +13,7 @@ function captureDataPers() {
 }
 
 function showData() {
-  alert(dataPers));
+  alert(dataPers);
 }
 
 const handleForm = (event) => {
