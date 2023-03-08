@@ -3,29 +3,29 @@ function captureDataPers() {
     let mail = document.getElementById('idMail')
     let userMsg = document.getElementById('idMsg')
 
-    /* console.log(name.value)
-    console.log(mail.value)
-    console.log(userMsg.value) */
-
-    console.log(name)
-    console.log(mail)
-    console.log(userMsg)
-
-    /* let dataPers = {
+      let dataPers = {
         [name.name] : name.value,
-        [mail.mail] : mail.value,
-        [userMsg.userMsg] : userMsg.value
-    } */
+        [mail.name] : mail.value,
+        [userMsg.name] : userMsg.value
+    }
+    console.log(dataPers)
+    return dataPers;
 }
 
+function showData() {
+  alert(dataPers));
+}
 
 const handleForm = (event) => {
     event.preventDefault()
     captureDataPers()
+    showData() 
+
 }
 
-let buttonForm = document.getElementById('button-Form')
+let buttonForm = document.getElementById('submit')
+
 buttonForm.addEventListener(
-    'click', 
-    handleForm 
-)
+  'click', 
+  handleForm,
+  )
