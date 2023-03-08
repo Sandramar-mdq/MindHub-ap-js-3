@@ -104,12 +104,19 @@
     flex-direction: column;
 }
 
+.cnf-main{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .c-img{
     height: 300px;
     object-fit: cover;
     background-size: cover;
     border-radius:5px;
 }
+
 
 .c-btn{
     padding: 10px;
