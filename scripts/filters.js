@@ -14,6 +14,7 @@ let templateCard = (data)=>{
       `
     }
 
+    
 let printEvents = (id_html, array_events) => {
     let selector = document.querySelector(`#${id_html}`)
     let templates = array_events.map(templateCard).join('')
@@ -33,8 +34,16 @@ let captureData = (id_text, id_checks, array_events) => {
             each.length === 0 || inputChecks.includes(each.category)
         ))
     })
-    printEvents("cards-container", eventFiltered)
+
+        if (eventFiltered.length>0) {
+          printEvents("cards-container", eventFiltered)
+        } else {
+          templateNotFound('#cards-container')
+        }
+    
 }
+
+
 
 document.querySelector("#name").addEventListener("keyup", ()=> captureData("name", "checks", data.events))
 

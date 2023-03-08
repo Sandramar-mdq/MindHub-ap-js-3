@@ -30,10 +30,18 @@ let captureData = (id_text, id_checks, array_events) => {
         return (( 
             each.name.toLowerCase().includes(inputText.toLowerCase().trim())
         )&&( 
-            each.length === 0 || inputChecks.includes(each.category)
-        ))
+            each.length === 0 || inputChecks.includes(each.category
+        )&&(
+            each.date > data.currentDate
+    )))
     })
-    printEvents("cards-container-upComing", eventFiltered)
+
+    if (eventFiltered.length>0) {
+        printEvents("cards-container-upComing", eventFiltered)
+      } else {
+        templateNotFound('#cards-container-upComing')
+      }
+  
 }
 
 document.querySelector("#name").addEventListener("keyup", ()=> captureData("name", "checks", data.events))
