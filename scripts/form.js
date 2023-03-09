@@ -8,24 +8,25 @@ function captureDataPers() {
         [mail.name] : mail.value,
         [userMsg.name] : userMsg.value
     }
+    
     console.log(dataPers)
     return dataPers;
 }
 
 function showData() {
-  alert(dataPers);
+  alert("PERSONAL DATA TO SEND"/dataPers);
 }
 
 const handleForm = (event) => {
     event.preventDefault()
-    captureDataPers()
+    captureDataPers(dataPers)
     showData() 
 
 }
 
-let buttonForm = document.getElementById('submit')
+let buttonForm = document.getElementById('button-Form')
 
 buttonForm.addEventListener(
   'click', 
-  handleForm,
+  handleForm
   )
