@@ -1,26 +1,30 @@
 function captureDataPers() {
-    let name = document.getElementById('idName')
-    let mail = document.getElementById('idMail')
-    let userMsg = document.getElementById('idMsg')
+    let name = document.getElementById('idName').value
+    let mail = document.getElementById('idMail').value
+    let userMsg = document.getElementById('idMsg').value
 
+    /* console.log(userMsg)
+ */
       let dataPers = {
-        [name.name] : name.value,
-        [mail.name] : mail.value,
-        [userMsg.name] : userMsg.value
+        'name': name,
+        'mail' : mail,
+        'userMsg' : userMsg
     }
-    
+   
     console.log(dataPers)
-    return dataPers;
+   
+    alert( 
+      `USER DATA SEND:  
+    Nombre: ${dataPers.name}
+    Email: ${dataPers.name}
+    Mesagge: ${dataPers.name}
+    `)
 }
 
-function showData() {
-  alert("PERSONAL DATA TO SEND"/dataPers);
-}
 
 const handleForm = (event) => {
     event.preventDefault()
-    captureDataPers(dataPers)
-    showData() 
+    captureDataPers()
 
 }
 
